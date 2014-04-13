@@ -1,0 +1,11 @@
+content   emailcoinfilter                 chrome/content/
+resource  emailcoinfilter                 chrome/modules/
+skin      emailcoinfilter   classic/1.0   chrome/skin/
+
+locale    emailcoinfilter   en-GB         chrome/locale/en-GB/
+
+style chrome://global/content/overlay.xul chrome://emailcoinfilter/skin/overlay.css
+style chrome://global/content/customizeToolbar.xul chrome://emailcoinfilter/skin/overlay.css
+
+overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://emailcoinfilter/content/overlayCompose.xul
+overlay chrome://messenger/content/messenger.xul chrome://emailcoinfilter/content/overlay.xul

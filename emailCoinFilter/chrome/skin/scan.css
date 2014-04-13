@@ -1,0 +1,115 @@
+/**
+ * @file scan.css
+ * @update 2012/06/18 23:48
+ * @author Paolo Rovelli
+ */
+
+
+
+caption {
+	margin: 5px 0;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.indLT0 {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.indRG0 {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+
+
+/* Font style */
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.size125 {
+	font-size: 125%;
+}
+
+
+
+/* Font color */
+
+.black {
+	color: #000000;
+}
+.darkgrey {
+	color: #4F4F4F;
+}
+.red {
+	color: red;
+}
+.scarlet {
+	color: #800000;
+}
+
+
+
+/* Scan window */
+
+.title {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.image {
+	width: 48px;
+	height: 48px;
+}
+
+.text {
+	min-width: 352px;
+}
+
+#emailcoinfilter-ScanHead, #emailcoinfilter-SecurityInfo, #emailcoinfilter-ScanSummary {
+	padding: 10px;
+	text-align: left;
+	min-width: 800px;
+}
+
+#emailcoinfilter-ScanProgress {
+	padding: 10px;
+	text-align: center;
+	min-width: 800px;
+}
+
+#emailcoinfilter-ScanHead #emailcoinfilter-ScanBox {
+	min-width: 400px;
+}
+
+#emailcoinfilter-ScanHead #emailcoinfilter-TimeBox {
+	text-align: right;
+	min-width: 400px;
+}
+
+#emailcoinfilter-ScanProgress #emailcoinfilter-ProgressBox {
+	width: 800px;
+}
+
+#emailcoinfilter-SecurityInfo #emailcoinfilter-SenderBox {
+	min-width: 600px;
+}
+
+#emailcoinfilter-SecurityInfo #emailcoinfilter-SpamBox {
+	text-align: right;
+	min-width: 200px;
+}
+
+#emailcoinfilter-ScanSummary #emailcoinfilter-SummaryBox {
+	font-size: 125%;
+}

@@ -1,0 +1,34 @@
+/* Button */
+
+#emailcoinfilter-ScanButton {
+	list-style-image: url("chrome://emailcoinfilter/skin/scanButton.png");
+}
+[iconsize="small"] #emailcoinfilter-ScanButton {
+	list-style-image: url("chrome://emailcoinfilter/skin/scanButton_small.png");
+}
+
+#emailcoinfilter-SourceButton {
+	list-style-image: url("chrome://emailcoinfilter/skin/sourceButton.png");
+}
+[iconsize="small"] #emailcoinfilter-SourceButton {
+	list-style-image: url("chrome://emailcoinfilter/skin/sourceButton_small.png");
+}
+
+
+/* Statusbar */
+
+#emailcoinfilter-SpamCounterStat {
+	color: #800000;
+}
+
+
+/* treeCol */
+
+#emailcoinfilter-SpamLevelCol, treechildren::-moz-tree-image(emailcoinfilter-SpamStatus) {
+	list-style-image: url("chrome://emailcoinfilter/skin/emailCoin.png") !important;
+}
+#emailcoinfilter-SpamLevelCol {
+	padding: 0px 5px;
+	width: 36px;
+	max-width: 144px;
+}

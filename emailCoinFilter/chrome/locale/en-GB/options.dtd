@@ -1,0 +1,38 @@
+<!ENTITY window.title "emailCoin Filter Preferences">
+<!ENTITY emailsecurity.email "emailCoinFilter@gmail.com">
+<!ENTITY emailsecurity.url "emailCoinFilter.com">
+<!ENTITY settings.general.title "General">
+<!ENTITY settings.general.caption "General">
+<!ENTITY blacklist.title "Blacklist">
+<!ENTITY blacklist.caption "Blocked Senders">
+<!ENTITY blacklist.active.label "Blacklist activated (requires restart)">
+<!ENTITY blacklist.active.accesskey "B">
+<!ENTITY blacklist.active.legend "*All the incoming emails from blocked senders are automatically marked as junk.">
+<!ENTITY blacklist.delete.label "Automatically delete incoming emails from blocked senders">
+<!ENTITY blacklist.delete.accesskey "d">
+<!ENTITY blacklist.label "Blocked email addresses:">
+<!ENTITY blacklist.legend "*IMPORTANT: put only one email address (e.g. user@domain.us) or domain (e.g. @domain.us) for each row.">
+<!ENTITY whitelist.title "Whitelist">
+<!ENTITY whitelist.caption "Trusted Senders">
+<!ENTITY whitelist.active.label "Whitelist activated (requires restart)">
+<!ENTITY whitelist.active.legend "*All the incoming emails from trusted senders are NOT scanned.">
+<!ENTITY whitelist.active.accesskey "W">
+<!ENTITY whitelist.label "Trusted email addresses:">
+<!ENTITY whitelist.legend "*IMPORTANT: put only one email address (e.g. user@domain.us) or domain (e.g. @domain.us) for each row.">
+<!ENTITY securityinfo.title "Security Information">
+<!ENTITY securityinfo.caption "Security Information">
+<!ENTITY securityinfo.received.label "Show the Received header in the extended header view">
+<!ENTITY securityinfo.received.accesskey "R">
+<!ENTITY help.title "Help">
+<!ENTITY help.caption "Help">
+<!ENTITY help.email "Email:">
+<!ENTITY help.website "Website:">
+<!ENTITY faq.caption "FAQ">
+<!ENTITY faq.url "Please, visit the web page:">
+<!ENTITY faq.question1 "How can I encourage future development?">
+<!ENTITY faq.answer1 "Please donate to:">
+<!ENTITY emailCoinFilter_sending_address_label "eMailCoin Sending Address:">
+<!ENTITY emailCoinFilter_sending_amount_label "eMailCoin Default Amount to Send:">
+<!ENTITY emailCoinFilter_filter_amount_label "eMailCoin Amount required to get to the inbox:">
+<!ENTITY emailCoinFilter_transaction_fee_label "eMailCoin Fee to add to this transaction:">
+<!ENTITY emailCoinFilter_rpc_address_label "eMailCoin rpc address and port to use:">

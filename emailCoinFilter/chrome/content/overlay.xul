@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="chrome://emailcoinfilter/skin/overlay.css"?>
+
+<!DOCTYPE prefwindow SYSTEM "chrome://emailcoinfilter/locale/overlay.dtd">
+
+<!--
+@update 2012/05/23 20:04
+@author emailCoinFilter@gmail.com
+@author Paolo Rovelli
+-->
+<overlay id="emailcoinfilter-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://emailcoinfilter/content/buttons.js" />
+	<script type="application/x-javascript" src="chrome://emailcoinfilter/content/listeners.js" />
+	<script type="application/x-javascript" src="chrome://emailcoinfilter/content/threads.js" />
+	
+	<!-- Top/Menu Toolbar -->
+	<menupopup id="messageMenuPopup">
+		<menuitem id="emailcoinfilter-ScanCommand" label="&scan.button.label;" tooltiptext="&scan.button.tooltip;" image="chrome://emailcoinfilter/skin/scanButton_small.png" oncommand="emailcoinfilter.Buttons.scan();" insertbefore="openMessageWindowMenuitem" />
+	</menupopup>
+	<menupopup id="taskPopup">
+		<menuitem id="emailcoinfilter-OptionsCommand" label="&options.item.label;" tooltiptext="&options.item.tooltip;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" oncommand="emailcoinfilter.Buttons.openWindow('chrome://emailcoinfilter/content/options.xul');" insertbefore="filtersCmd" />
+	</menupopup>
+	
+	<!-- Toolbar Button -->
+	<toolbarpalette id="MailToolbarPalette">
+		<toolbarbutton id="emailcoinfilter-ScanButton" label="&scan.button.label;" tooltiptext="&scan.button.tooltip;" oncommand="emailcoinfilter.Buttons.scan();" class="toolbarbutton-1 chromeclass-toolbar-additional" />
+		<toolbarbutton id="emailcoinfilter-SourceButton" label="&source.button.label;" tooltiptext="&source.button.tooltip;" oncommand="emailcoinfilter.Buttons.source();" class="toolbarbutton-1 chromeclass-toolbar-additional" />
+	</toolbarpalette>
+	
+	<!-- Mail/Thread Pane Context Menu -->
+	<popup id="mailContext">
+		<menuitem id="emailcoinfilter-ScanItem" label="&scan.item.label;" tooltiptext="&scan.item.tooltip;" image="chrome://emailcoinfilter/skin/scanButton_small.png" oncommand="emailcoinfilter.Buttons.scan();" insertbefore="mailContext-openNewWindow" />
+		<menuitem id="emailcoinfilter-AddEmailToBlacklist" label="&blacklist.email.item.label;" tooltiptext="&blacklist.email.item.tooltip;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" oncommand="emailcoinfilter.Buttons.addToBlacklist();" insertafter="mailContext-mark" />
+		<menuitem id="emailcoinfilter-AddDomainToBlacklist" label="&blacklist.domain.item.label;" tooltiptext="&blacklist.domain.item.tooltip;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" oncommand="emailcoinfilter.Buttons.addToBlacklist(true);" insertafter="emailcoinfilter-AddEmailToBlacklist" />
+		<menuitem id="emailcoinfilter-AddEmailToWhitelist" label="&whitelist.email.item.label;" tooltiptext="&whitelist.email.item.tooltip;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" oncommand="emailcoinfilter.Buttons.addToWhitelist();" insertafter="emailcoinfilter-AddDomainToBlacklist" />
+		<menuitem id="emailcoinfilter-AddDomainToWhitelist" label="&whitelist.domain.item.label;" tooltiptext="&whitelist.domain.item.tooltip;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" oncommand="emailcoinfilter.Buttons.addToWhitelist(true);" insertafter="emailcoinfilter-AddEmailToWhitelist" />
+	</popup>
+	
+	<!-- Folder Pane Context Menu -->
+	<popup id="folderPaneContext">
+		<menuitem id="emailcoinfilter-ScanItem" label="&scan.button.label;" tooltiptext="&scan.button.tooltip;" image="chrome://emailcoinfilter/skin/scanButton_small.png" oncommand="emailcoinfilter.Buttons.scan();" insertbefore="folderPaneContext-openNewWindow" />
+	</popup>
+	
+	<!-- Statusbar -->
+	<statusbar id="status-bar">
+		<statusbarpanel id="emailcoinfilter-SpamCounterStat" class="statusbarpanel-iconic-text" crop="left" label="&statusbar.label;" image="chrome://emailcoinfilter/skin/emailcoinfilter_small.png" />
+	</statusbar>
+	
+	<!-- Thread Tree -->
+	<tree id="threadTree">
+		<treecols id="threadCols">
+			<splitter class="tree-splitter" />
+			<treecol id="emailcoinfilter-SpamLevelCol" class="treecol-image" label="&treecol.label;" tooltiptext="&treecol.tooltip;" fixed="false" flex="2" hidden="false" insertafter="junkStatusCol" />
+			<splitter class="tree-splitter" />
+		</treecols>
+	</tree>
+
+</overlay>

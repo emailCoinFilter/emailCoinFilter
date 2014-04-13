@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet type="text/css" href="chrome://emailcoinfilter/skin/options.css"?>
+
+<!DOCTYPE prefwindow SYSTEM "chrome://emailcoinfilter/locale/options.dtd">
+
+<!--
+@update 2014/03/02
+@author emailCoinFilter@gmail.com
+-->
+<prefwindow id="emailcoinfilter-Preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&window.title;">
+	<script type="application/x-javascript" src="chrome://emailcoinfilter/content/options.js" />
+	
+	<prefpane id="emailcoinfilter-GeneralSettings" label="&settings.general.title;" image="chrome://emailcoinfilter/skin/settings.png" title="&settings.general.title;">
+		<preferences>
+			<preference id="blacklist.active" name="extensions.emailcoinfilter.blacklist.active" type="bool" />
+			<preference id="whitelist.active" name="extensions.emailcoinfilter.whitelist.active" type="bool" />
+			<preference id="header.received" name="extensions.emailcoinfilter.header.received" type="bool" />
+			<preference id="header.xspamstatus" name="extensions.emailcoinfilter.header.xspamstatus" type="bool" />
+			<preference id="emailCoin.address" name="extensions.emailcoinfilter.emailCoin.address" type="string" />
+      <preference id="emailCoin.amount" name="extensions.emailcoinfilter.emailCoin.amount" type="int" />
+      <preference id="emailCoin.fee" name="extensions.emailcoinfilter.emailCoin.fee" type="int" />
+      <preference id="emailCoin.filterAmount" name="extensions.emailcoinfilter.emailCoin.filterAmount" type="int" />
+      <preference id="emailCoin.rpcAddress" name="extensions.emailcoinfilter.emailCoin.rpcAddress" type="string" />
+		</preferences>
+		
+		<groupbox flex="1" id="generalcontrol">
+			<caption label="&settings.general.caption;" />
+			
+      <hbox align="center">
+        <label value="&emailCoinFilter_sending_address_label;" />
+        <textbox id="emailCoin.address" preference="emailCoin.address" size="30" />
+      </hbox>
+      
+      <hbox align="center">
+        <label value="&emailCoinFilter_sending_amount_label;" />
+        <textbox id="emailCoin.amount" preference="emailCoin.amount" size="10" />
+      </hbox>
+
+      <hbox align="center">
+        <label value="&emailCoinFilter_transaction_fee_label;" />
+        <textbox id="emailCoin.fee" preference="emailCoin.fee" size="10" />
+      </hbox>
+      
+      <hbox align="center">
+        <label value="&emailCoinFilter_filter_amount_label;" />
+        <textbox id="emailCoin.filterAmount" preference="emailCoin.filterAmount" size="10" />
+      </hbox>
+      
+      <hbox align="center">
+        <label value="&emailCoinFilter_rpc_address_label;" />
+        <textbox id="emailCoin.rpcAddress" preference="emailCoin.rpcAddress" size="30" />
+      </hbox>
+      <label value="Currently this only works with unlocked wallets" />
+      
+      
+		</groupbox>
+
+	</prefpane>
+	
+	<prefpane id="emailcoinfilter-Blacklist" label="&blacklist.title;" image="chrome://emailcoinfilter/skin/blacklist.png" title="&blacklist.title;">
+		<preferences>
+			<preference id="blacklist.active" name="extensions.emailcoinfilter.blacklist.active" type="bool" />
+			<preference id="blacklist.delete" name="extensions.emailcoinfilter.blacklist.delete" type="bool" />
+			<preference id="blacklist" name="extensions.emailcoinfilter.blacklist" type="string" />
+		</preferences>
+		
+		<groupbox flex="1" id="blacklist">
+			<caption label="&blacklist.caption;" />
+
+			<checkbox class="indBT0" preference="blacklist.active" label="&blacklist.active.label;" accesskey="&blacklist.active.accesskey;" onclick="emailcoinfilter.Options.checkBlacklistDependences();" />
+			<label class="legend indLT18 indBT5">&blacklist.active.legend;</label>
+
+			<label control="blacklistTextBox">&blacklist.label;</label>
+			<textbox id="blacklistTextBox" class="blacklistActiveDependancies" preference="blacklist" rows="15" multiline="true" />
+			<label class="legend indBT10">&blacklist.legend;</label>
+		</groupbox>
+	</prefpane>
+	
+	<prefpane id="emailcoinfilter-Whitelist" label="&whitelist.title;" image="chrome://emailcoinfilter/skin/whitelist.png" title="&whitelist.title;">
+		<preferences>
+			<preference id="whitelist.active" name="extensions.emailcoinfilter.whitelist.active" type="bool" />
+			<preference id="whitelist" name="extensions.emailcoinfilter.whitelist" type="string" />
+		</preferences>
+		
+		<groupbox flex="1" id="whitelist-options">
+			<caption label="&whitelist.caption;" />
+
+			<checkbox class="indBT0" preference="whitelist.active" label="&whitelist.active.label;" accesskey="&whitelist.active.accesskey;" onclick="emailcoinfilter.Options.checkWhitelistDependences();" />
+			<label class="legend indLT18 indBT10">&whitelist.active.legend;</label>
+
+			<label control="whitelistTextBox">&whitelist.label;</label>
+			<textbox id="whitelistTextBox" class="whitelistActiveDependancies" preference="whitelist" rows="15" multiline="true" />
+			<label class="legend indBT10">&whitelist.legend;</label>
+		</groupbox>
+	</prefpane>
+	
+	<prefpane id="emailcoinfilter-Help" label="&help.title;" image="chrome://emailcoinfilter/skin/help.png" title="&help.title;">
+		<groupbox flex="1" id="faq">
+			<caption label="&faq.caption;" />
+			<vbox>
+				<label class="indBT25">&faq.url; <label class="text-link" value="&emailsecurity.url;" onclick="emailcoinfilter.Options.loadWebsite(event);" /></label>
+				<label class="bold indBT0">&faq.question1;</label>
+				<label class="italic indTP0 indBT0">&faq.answer1;</label>
+				<hbox align="center">
+          <label value="Bitcoin:" />
+          <textbox readonly="readonly" value="18eQWxY5AZwF68wkZsQYM4xhjpmpkahvUn" size="30" />
+        </hbox>
+				<hbox align="center">
+          <label value="Dogecoin:" />
+          <textbox readonly="readonly" value="DAhmpjQquih2D172qXZn68qSn3Yixv7Kjv" size="30" />
+        </hbox>
+			</vbox>
+		</groupbox>
+		
+		<separator />
+		
+		<groupbox flex="1" id="help">
+			<caption label="&help.caption;" />
+			<vbox>
+				<label class="bold">&help.email; <label class="text-link" value="&emailsecurity.email;" onclick="emailcoinfilter.Options.loadWebsite(event);" /></label>
+				<label class="bold indBT10">&help.website; <label class="text-link" value="&emailsecurity.url;" onclick="emailcoinfilter.Options.loadWebsite(event);" /></label>
+			</vbox>
+		</groupbox>
+	</prefpane>
+</prefwindow>

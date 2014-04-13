@@ -1,0 +1,15 @@
+<!ENTITY window.title "emailCoinFilter">
+<!ENTITY scan.title "Scan">
+<!ENTITY scan.status "Status:">
+<!ENTITY scan.status.scanning "Scanning emails">
+<!ENTITY scan.time.start "Start time:">
+<!ENTITY scan.time.end "End time:">
+<!ENTITY progress.caption "Scan Progress">
+<!ENTITY securityinfo.sender "Sender:">
+<!ENTITY securityinfo.received "Received:">
+<!ENTITY securityinfo.received.from "from">
+<!ENTITY securityinfo.received.by "by">
+<!ENTITY results.caption "Scan Summary">
+<!ENTITY results.folders "Scanned folders:">
+<!ENTITY results.emails "Scanned emails:">
+

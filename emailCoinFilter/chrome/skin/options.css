@@ -1,0 +1,119 @@
+/**
+ * @file options.css
+ * @update 2012/06/05 20:13
+ * @author Paolo Rovelli
+ */
+
+
+
+caption {
+	margin: 5px 0;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.indTP0 {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.indTP5 {
+	padding-top: 5px;
+}
+.indBT0 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.indBT5 {
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+}
+.indBT10 {
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+.indBT15 {
+	margin-bottom: 15px;
+	padding-bottom: 0px;
+}
+.indBT25 {
+	margin-bottom: 25px;
+	padding-bottom: 0px;
+}
+.indLT0 {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.indRG0 {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+.indLT5 {
+	padding-left: 5px;
+}
+.indRG5 {
+	padding-right: 5px;
+}
+.indLT10 {
+	margin-left: 10px;
+}
+.indRG10 {
+	padding-right: 10px;
+}
+.indLT18 {
+	padding-left: 18px;
+}
+
+
+
+/* Font style */
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+
+
+/* Font color */
+
+.black {
+	color: #000000;
+}
+
+.grey {
+	color: #A2A2A2;
+}
+
+.darkgrey {
+	color: #4F4F4F;
+}
+
+.red {
+	color: red;
+}
+
+.scarlet {
+	color: #800000;
+}
+
+
+
+/* Preferences */
+
+#emailcoinfilter-Preferences .paneButtonIcon {
+	margin-left: 35px;
+	margin-right: 35px;
+	width: 32px;
+}
+
+#emailcoinfilter-Preferences .legend {
+	color: #A2A2A2;
+	font-size: 80%;
+}

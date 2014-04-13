@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://emailcoinfilter/locale/overlayCompose.dtd">
+
+<!--
+@update 2014/03/02
+@author emailCoinFilter@gmail.com
+-->
+
+<overlay id="emailcoinfilter-OverlayCompose" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://emailcoinfilter/content/compose.js" />
+  
+	<vbox flex="1" id="addresses-box">
+	  <hbox align="center">
+	    <!-- <checkbox label="&emailCoinFilter_sendCoin_label;" /> -->
+      <label value="&emailCoinFilter_coin_address_label;" />
+      <textbox id="addressTextBox" size="30" />
+      <label value="&emailCoinFilter_coin_amount_label;" />
+      <textbox id="amountTextBox" size="10" />
+      <button label="&emailCoinFilter_attach_button_label;" oncommand="attachCoin();"/> 
+    </hbox>
+  </vbox>
+
+</overlay>
+
+
+
+

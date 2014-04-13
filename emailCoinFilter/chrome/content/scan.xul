@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet type="text/css" href="chrome://emailcoinfilter/skin/scan.css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://emailcoinfilter/locale/scan.dtd">
+
+<!--
+@update 2012/06/18 23:48
+@author Paolo Rovelli
+-->
+<dialog id="emailcoinfilter-ScanWindow" title="&window.title;" orient="vertical" autostretch="always" onload="sizeToContent(); initScanVals();" buttons="accept" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script><![CDATA[
+		function initScanVals() {
+			var date = new Date();
+			
+			window.document.getElementById("emailcoinfilter-ScanTimeStart").setAttribute("value", date.toLocaleString());
+			//window.document.getElementById("emailcoinfilter-ScanProgress").setAttribute("value", "0");
+			//window.document.getElementById("emailcoinfilter-ScanFolderCounter").setAttribute("value", "0");
+			//window.document.getElementById("emailcoinfilter-ScanEmailCounter").setAttribute("value", "0");
+			//window.document.getElementById("emailcoinfilter-ScanSpamCounter").setAttribute("value", "0");
+			//window.document.getElementById("emailcoinfilter-EmailSender").setAttribute("value", "---");
+			//window.document.getElementById("emailcoinfilter-SpamRate").setAttribute("value", "---");
+			//window.document.getElementById("emailcoinfilter-ReceivedHeaderFrom").setAttribute("value", "---");
+			//window.document.getElementById("emailcoinfilter-ReceivedHeaderBy").setAttribute("value", "---");
+			//window.document.getElementById("emailcoinfilter-XSpamStatus").setAttribute("value", "---");
+		}
+	]]></script>
+	
+	<groupbox id="emailcoinfilter-ScanHead" align="left" orient="horizontal">
+		<hbox id="emailcoinfilter-ScanBox">
+			<vbox class="image">
+				<image src="chrome://emailcoinfilter/skin/scan.png" />
+			</vbox>
+			<vbox class="text">
+				<label class="title">&scan.title;</label>
+				<label class="darkgrey">&scan.status; <label id="emailcoinfilter-ScanStatus" class="black" value="&scan.status.scanning;" /></label>
+			</vbox>
+		</hbox>
+		<hbox id="emailcoinfilter-TimeBox">
+			<vbox id="emailcoinfilter-TimeBox">
+				<label class="darkgrey">&scan.time.start; <label id="emailcoinfilter-ScanTimeStart" class="black" value="---" /></label>
+				<label id="emailcoinfilter-ScanTimeEndLabel" class="darkgrey">&scan.time.end; <label id="emailcoinfilter-ScanTimeEnd" class="black bold" value="" /></label>
+			</vbox>
+		</hbox>
+	</groupbox>
+	
+	<separator />
+	
+	<groupbox id="emailcoinfilter-ScanProgress" align="center" orient="horizontal" class="center">
+		<caption label="&progress.caption;" />
+		<vbox>
+			<progressmeter id="emailcoinfilter-ProgressBox" mode="determined" max="100" value="0" />
+			<label id="emailcoinfilter-ScanEmail" value="" />
+		</vbox>
+	</groupbox>
+		
+	<separator />
+	
+	<groupbox id="emailcoinfilter-SecurityInfo" align="center" orient="horizontal" class="center">
+		<caption label="&securityinfo.caption;" />
+		<hbox>
+			<vbox id="emailcoinfilter-SenderBox">
+				<label class="darkgrey">&securityinfo.sender; <label id="emailcoinfilter-EmailSender" class="black" value="---" /></label>
+				<label class="darkgrey">&securityinfo.received; &securityinfo.received.from; <label id="emailcoinfilter-ReceivedHeaderFrom" class="black indLT0 indRG0" value="---" /> &securityinfo.received.by; <label id="emailcoinfilter-ReceivedHeaderBy" class="black indLT0 indRG0" value="---" /></label>
+			</vbox>
+			<vbox id="emailcoinfilter-SpamBox">
+				<label class="darkgrey size125">&securityinfo.spamrate; <label id="emailcoinfilter-SpamRate" class="scarlet bold" value="---" /></label>
+				<label class="darkgrey">&securityinfo.xspamstatus; <label id="emailcoinfilter-XSpamStatus" class="black" value="---" /></label>
+			</vbox>
+		</hbox>
+	</groupbox>
+	
+	<separator />
+	
+	<groupbox id="emailcoinfilter-ScanSummary" align="left" orient="horizontal">
+		<caption label="&results.caption;" />
+			<vbox id="emailcoinfilter-SummaryBox">
+				<label class="darkgrey">&results.folders; <label id="emailcoinfilter-ScanFolderCounter" class="black bold" value="0" /></label>
+				<label class="darkgrey">&results.emails; <label id="emailcoinfilter-ScanEmailCounter" class="black bold" value="0" /></label>
+				<label class="darkgrey">&results.spam; <label id="emailcoinfilter-ScanSpamCounter" class="red bold" value="0" /></label>
+			</vbox>
+	</groupbox>
+</dialog>

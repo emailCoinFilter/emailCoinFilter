@@ -1,0 +1,4 @@
+<!ENTITY emailCoinFilter_sendCoin_label "send/offer coin">
+<!ENTITY emailCoinFilter_coin_address_label "Dogecoin Address:">
+<!ENTITY emailCoinFilter_coin_amount_label "Dogecoin Amount:">
+<!ENTITY emailCoinFilter_attach_button_label "Attach Coin/Offer">
