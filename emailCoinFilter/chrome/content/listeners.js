@@ -68,7 +68,7 @@ emailcoinfilter.NewEmailListener =
   //        console.log("got email for message");
   
           //TODO: this currently a bypass of the filter, this needs to be upgraded to check for a signed message
-          if(emailHeader.subject.contains("Sent to bulk mail RE:") || emailheader.subject.constains("My dogecoin address RE:"))
+          if(emailHeader.subject.contains("Sent to bulk mail RE:") || emailHeader.subject.contains("My dogecoin address RE:"))
           {
             return;
           }
